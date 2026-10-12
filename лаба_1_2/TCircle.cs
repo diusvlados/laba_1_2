@@ -4,7 +4,7 @@ namespace варіант7
 {
     internal class TCircle
     {
-        protected double r;   // радіус
+        protected double r;  // радіус
 
         public TCircle()
         {
