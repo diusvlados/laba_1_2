@@ -73,15 +73,7 @@ namespace варіант7
         {
             return 2 * Math.PI * r;
         }
-
         // Порівняння
-        public override bool Equals(object obj)
-        {
-            if (obj is TCircle other)
-                return r == other.r;
-            return false;
-        }
-
         public static bool operator ==(TCircle c1, TCircle c2)
         {
             if (c1 is null || c2 is null)

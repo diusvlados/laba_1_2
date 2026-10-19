@@ -2,7 +2,7 @@
 
 namespace варіант7
 {
-    internal class TCone : TCircle
+    internal class TCone : TCircleF
     {
         private double h;   // висота конуса
 
@@ -25,8 +25,8 @@ namespace варіант7
 
         public double H
         {
-            get 
-            { 
+            get
+            {
                 return h;
             }
             set
@@ -41,6 +41,18 @@ namespace варіант7
         public double Volume()
         {
             return Area() * h / 3;
+        }
+
+        public static bool operator ==(TCone cone1, TCone cone2)
+        {
+            if (cone1 is null || cone2 is null)
+                return cone1 is null && cone2 is null;
+            return cone1.r == cone2.r && cone1.h == cone2.h;
+        }
+
+        public static bool operator !=(TCone cone1, TCone cone2)
+        {
+            return !(cone1 == cone2);
         }
 
         // Спершу вводимо радіус потім висоту
